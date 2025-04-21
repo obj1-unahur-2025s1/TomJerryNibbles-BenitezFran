@@ -37,6 +37,10 @@ Acá vamos a verificar mediante los test de wollok si nuestro código está corr
 - si Jerry cumple años (3 años de edad), y luego Tom lo vuelve a comer, pasaría a tener 25.9 (su energia es 209)  
 - si corre 38 metros su velocidad pasa a ser 24 (su energia es 190)
 
+// para el segundo caso
+- Verificar si Tom puede encontrar a Jerry si este se encuentra a 20 metros desde donde esta Tom, y si puede cazarlo
+
+
 ## Parte 2:  Poder comer y cazar.
 
 Se agrega como requerimientos 

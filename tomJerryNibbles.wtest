@@ -2,16 +2,81 @@ import tomJerryNibbles.*
 
 describe "Grupo de test" {
 
-  test "test 1" {
-    assert.equals(100, 50+50)
+// los test se hacen solo con un assert no varios ni 0
+
+
+  test "Velocidad Maxima de Tom al inicio" {
+    assert.equals(10, tom.velocidadMaxima())
+  }
+  test " Velocidad Maxima de Tom tras comer a Jerry" {
+    // metodo indicativo
+    // metodo consultivo
+    tom.comer(jerry)
+    assert.equals(15.2 , tom.velocidadMaxima())
   }
 
-  test "test 3" {
-    assert.that(true)
+  test "Velocidad Maxima (despues de comer a Jerry) de Tom al correr 24 metros" {
+    // metodo indicativo
+    // metodo consultivo
+    tom.comer(jerry)
+    tom.correr(24)
+    assert.equals(14 , tom.velocidadMaxima())
   }
 
   test "test 4" {
     assert.notThat(false)
   }
 
+    test " Velocidad Maxima de Tom tras comer a Jerry, correr 24 metros y comer a Nibbles" {
+    // metodo indicativo
+    // metodo consultivo
+    tom.comer(jerry)
+    tom.correr(24)
+    tom.comer(nibbles)
+    assert.equals(18.7 , tom.velocidadMaxima())
+  }
+
+  // test jerry cumple años
+
+      test " Velocidad Maxima de Tom tras comer a Jerry, correr 24 metros y comer a Nibbles, cumple años jerry y vuelve a comerlo Tom" {
+    // metodo indicativo
+    // metodo consultivo
+    tom.comer(jerry)
+    tom.correr(24)
+    tom.comer(nibbles)
+    jerry.cumplirAnios()
+    tom.comer(jerry)
+
+    assert.equals(18.7 , tom.velocidadMaxima())
+  }
+
+  // correr 38
+        test " Velocidad Maxima de Tom tras comer a Jerry, correr 24 metros y comer a Nibbles, cumple años jerry y vuelve a comerlo Tom y vuelve a correr 38 metros" {
+    // metodo indicativo
+    // metodo consultivo
+    tom.comer(jerry)
+    tom.correr(24)
+    tom.comer(nibbles)
+    jerry.cumplirAnios()
+    tom.comer(jerry)
+    tom.correr(38)
+    assert.equals(18.7 , tom.velocidadMaxima())
+  }
+// completar los metodos de cazar y tmb los de Perez
+// comprobar el if , con ambos casos , el verdadero y falso
+
+test "Tom puede comer a un raton si esta cerca de los 100 metros" {
+  assert.that(tom.puedeCazar(100))
 }
+
+test "Tom NO puede comer a un raton si esta cerca de los 100 metros" {
+  assert.notThat(tom.puedeCazar(101))
+}
+
+test "Velocidad Maxima de Tom tras cazar a perez sin dientes ensima"{
+  tom.cazar(perez, 0)
+  assert.equals(12.7 , tom.velocidadMaxima())
+}
+
+}
+
